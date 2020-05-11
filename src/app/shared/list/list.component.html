@@ -1,0 +1,8 @@
+<h2 class="title">{{ title }}</h2>
+<div class="list" data-cy="scroll">
+  <div class="list__inner">
+    <div class="list__movie" *ngFor="let movie of movies">
+      <app-movie [movie]="movie"></app-movie>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "email": "dev@test.com",
+  "password": "123456"
+}

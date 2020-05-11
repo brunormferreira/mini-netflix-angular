@@ -1,0 +1,55 @@
+// Overlay
+$overlay: rgba(0, 0, 0, 0.5);
+
+// Font Sizes
+$font-small: 0.8rem;
+$font-normal: 1rem;
+$font-pinnedbar: 1.3rem;
+$font-title: 2rem;
+$font-big: 2.5rem;
+$font-bold: 700;
+
+// Component Sizes
+$header-height: 60px;
+
+// Colors
+$transparent: transparent;
+$purple: #a709a7;
+$white: #ffffff;
+$gray: #363636;
+$black: #000000;
+$dark-black: #141414;
+$ice: #CCC;
+
+// Components Colors
+$error-color: #ff0000;
+$error-user-color: #E87C03;
+$login-button-color: #E50914;
+$login-button-color-disabled: #d86c72;
+$placeholder-color: #b3b3b3;
+$header-color: #000000be;
+$pinnedbar-bg-color: #803;
+$pinnedbar-hover-color: #E90;
+$container-color: #000000d9;
+$container-not-found: #383838d9;
+$selected-route-color: #c2242c;
+$decoration-color: #daa30ec7;
+
+$shadow-header: 0px 4px 5px rgba(0, 0, 0, 0.4);
+$shadow-menu-header: 0px 5px 5px -1px rgba(0, 0, 0, 0.4);
+$shadow-banner: 0px 14px 10px rgba(0, 0, 0, 0.4);
+
+// BG's
+$background-gradient: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.712),
+  $overlay
+), url('/assets/images/banner.jpg');
+$bg-image: url('../../../assets/images/background.jpg');
+
+// ZIndex
+$firstLayer: 9;
+$secondLayer: 99;
+$thirdLayer: 999;
+$fourthLayer: 9999;
+$fifthLayer: 99999;

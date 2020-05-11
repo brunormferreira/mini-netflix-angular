@@ -1,0 +1,40 @@
+@mixin custom-scroll-bar() {
+  ::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 4px;
+    background: gray;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: #1d1d1d;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 4px;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

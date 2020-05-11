@@ -1,0 +1,25 @@
+<div class="profile">
+  <h2 class="profile__title">Informações do usuário</h2>
+  <div class="profile__container">
+      <img
+        class="profile__image"
+        [src]="profileData.profileImg"
+        alt="Imagem de Perfil"
+      />
+    <span class="profile__info">Login/Email: {{ profileData.email }}</span>
+    <span class="profile__info">Nome: {{ profileData.name }}</span>
+  <hr />
+  <h2 class="profile__title">Filmes favoritos</h2>
+  </div>
+  <div class="movie">
+    <ng-container *ngFor="let fav of profileData.favMovies">
+      <div class="movie__container">
+        <h2 class="movie__title">{{ fav.title }}</h2>
+        <img
+          [src]="fav.poster"
+          alt="fav.title"
+        />
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<app-banner></app-banner>
+<div *ngFor="let movie of list">
+  <app-list
+    [title]="movie.title"
+    [movies]="movie.list"
+  ></app-list>
+</div>

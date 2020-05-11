@@ -1,0 +1,32 @@
+[
+  {
+    "id": 11,
+    "name": "User one",
+    "email": "dev@test.com",
+    "password": "123456",
+    "profileImg": "assets/images/profile1.png",
+    "favMovies": [
+      {
+        "id": 1,
+        "categoryId": 2,
+        "title": "Seis Vezes Confusão",
+        "poster": "assets/movies/comedy/6vezesconfusao.jpg",
+        "views": 6
+      },
+      {
+        "id": 3,
+        "categoryId": 3,
+        "title": "Contato Visceral",
+        "poster": "assets/movies/horror/contatovisceral.jpg",
+        "views": 2
+      },
+      {
+        "id": 4,
+        "categoryId": 1,
+        "title": "Grande Luta",
+        "poster": "assets/movies/action/grandeluta.jpg",
+        "views": 8
+      }
+    ]
+  }
+]

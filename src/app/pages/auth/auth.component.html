@@ -1,0 +1,58 @@
+<div class="auth">
+  <app-page-loader [loading]="loading"></app-page-loader>
+  <div class="auth__logo">
+    <img class="auth__image" src="assets/images/netflix-logo.png" alt="netflix logo" />
+  </div>
+  <section class="auth__login">
+    <app-pinned-bar></app-pinned-bar>
+    <div class="auth__container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="auth__box">
+          <h1 class="auth__title">Entrar</h1>
+          <div class="--error" *ngIf="errorUser">
+            Desculpe, não encontramos uma conta com esse endereço de Email e/ou senha.
+            Por favor, tente novamente.
+          </div>
+          <div class="auth__formGroup">
+            <input
+              type="text"
+              class="auth__formControl"
+              placeholder="Insira seu Email"
+              autocomplete="off"
+              formControlName="email"
+              data-cy="email"
+              [ngClass]="{ invalid: getErrors('email')}"
+            />
+            <div *ngIf="f.email.touched && f.email.errors" class="--invalid-feedback">
+              <div *ngIf="f.email.errors.required">O Email é obrigatório.</div>
+              <div *ngIf="f.email.errors.email">Por favor, insira um Email válido.</div>
+          </div>
+          </div>
+          <div class="auth__formGroup">
+            <input
+              type="password"
+              class="auth__formControl"
+              placeholder="Senha"
+              autocomplete="off"
+              formControlName="password"
+              data-cy="password"
+              [ngClass]="{ invalid: getErrors('password') }"
+            />
+            <div *ngIf="f.password.touched && f.password.errors" class="--invalid-feedback">
+              <div *ngIf="f.password.errors.required">Por favor, insira uma senha válida.</div>
+              <div *ngIf="f.password.errors.minlength">A senha deve conter no mínimo 6 dígitos.</div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="auth__button"
+          type="submit"
+          data-cy="submit"
+          [disabled]="!f.email.valid && !f.password.valid"
+        >
+          Entrar
+        </button>
+      </form>
+    </div>
+  </section>
+</div>

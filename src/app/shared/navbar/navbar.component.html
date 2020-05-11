@@ -1,0 +1,44 @@
+<header class="header">
+  <div class="header__container">
+    <img
+      routerLink="/"
+      class="header__logo"
+      src="assets/images/netflix-logo.png"
+      alt="Mini-Netflix logo"
+    />
+    <nav class="nav">
+      <ul class="nav__list">
+        <li
+          class="nav__item"
+          [routerLinkActive]="'is-active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/">Entrada</a>
+        </li>
+        <li
+          [routerLinkActive]="'is-active'"
+        >
+          <a routerLink="/metrics">Metricas</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <ul>
+    <li data-cy="menu">
+      Menu
+      <ul class="dropdown">
+        <li [routerLinkActive]="'is-active'">
+          <a routerLink="/profile">Perfil</a>
+        </li>
+        <li>
+          <p
+            data-cy="logout"
+            (click)="logoutUser()"
+          >
+            Sair
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</header>

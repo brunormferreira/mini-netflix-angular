@@ -1,0 +1,21 @@
+@import '../../../scss/variables';
+
+.banner {
+  width: 100%;
+  height: 58vh;
+  background-image: $background-gradient;
+  background-size: cover;
+  box-shadow: $shadow-banner;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 120px 0px;
+  }
+
+  &__title {
+    color: $white;
+    margin: 0;
+  }
+}

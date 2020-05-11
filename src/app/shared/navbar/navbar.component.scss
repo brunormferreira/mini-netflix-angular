@@ -1,0 +1,80 @@
+@import '../../../scss/variables';
+
+.header {
+  width: 100%;
+  height: $header-height;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    box-shadow: $shadow-header;
+  }
+
+  &__logo {
+    width: 115px;
+    margin: 13px 35px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .nav > .nav__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      color: $white;
+      box-shadow: $shadow-menu-header;
+      padding: 22px;
+      position: relative;
+      transition-duration: 0.5s;
+      cursor: default;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      &.is-active {
+        background: $selected-route-color;
+      }
+
+      &:hover {
+        background: $selected-route-color;
+
+        ul, &:hover {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .dropdown {
+        margin-top: 22px;
+        background: $gray;
+        visibility: hidden;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.5s ease;
+
+        p {
+          margin: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

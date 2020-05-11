@@ -1,0 +1,51 @@
+@import '../../../scss/variables';
+
+.intro {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: 17em;
+  height: 10em;
+  margin: -6em -18em 0 0;
+  padding: 1em 1.5em;
+  overflow: hidden;
+  border-radius: 0.9em 0 0 0.9em;
+  border: thin solid $black;
+  border-right: none;
+  background-color: $pinnedbar-bg-color;
+  transition: 0.2s;
+  font-size: 0.9em;
+  box-shadow: $black 0em 0.3em 0.5em;
+
+  &:hover {
+    height: 15em;
+    margin: -12.5em 0 0 0;
+    overflow: auto;
+  }
+
+  &::before {
+    content: "\AB";
+    margin-left: -1em;
+  }
+
+  &__item {
+    margin-right: 1.5em;
+    padding: 0;
+    text-align: right;
+    list-style: none;
+  }
+
+  &__link {
+    &:hover {
+      background: $pinnedbar-hover-color;
+      color: $white;
+    }
+
+    &:link, &:visited {
+      font-size: $font-pinnedbar;
+      line-height: 1.231;
+      text-decoration: none;
+      color: $ice;
+    }
+  }
+}

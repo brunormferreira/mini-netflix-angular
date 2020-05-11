@@ -1,0 +1,28 @@
+@import '../../../scss/variables';
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../../assets/images/background.jpg');
+  background-position: center center;
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    place-items: center center;
+    z-index: $fifthLayer;
+    background: $container-not-found;
+  }
+
+  &__text {
+    font-size: $font-big;
+    font-weight: $font-bold;
+    color: $white;
+  }
+}

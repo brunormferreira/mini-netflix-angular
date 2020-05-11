@@ -1,0 +1,54 @@
+@import '../../../../scss/variables';
+
+.profile {
+  margin: 0px auto;
+  height: 100%;
+  padding: 25px 0;
+  max-width: 100%;
+
+  &__title {
+    text-decoration: underline;
+    text-decoration-color: $decoration-color;
+    text-align: center;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & > hr {
+      width: 400px;
+    }
+  }
+
+  &__image {
+    padding: 8px 0 2px 0px;
+    width: 119px;
+    height: 100px;
+    margin-bottom: 6px;
+  }
+
+  &__info {
+    line-height: 2rem;
+    font-weight: $font-bold;
+  }
+}
+
+.movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+
+  &__title {
+    color: $white;
+  }
+
+  &__container {
+    margin: 25px 40px;
+  }
+}

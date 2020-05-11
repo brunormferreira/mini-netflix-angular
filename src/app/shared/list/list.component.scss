@@ -1,0 +1,43 @@
+@import '../../../scss/mixins';
+
+.title {
+  margin: 30px 0 10px 18px;
+}
+
+.list {
+  overflow: auto;
+  width: 100%;
+
+  &__inner {
+    white-space: nowrap;
+    transition: 0.45s all;
+    margin: 50px 10px;
+
+    &:hover {
+      transform: translateX(calc(250px * (-0.5) / 2));
+
+      .list__movie {
+        opacity: .2;
+
+        &:hover {
+          transform: scale(1.5);
+          opacity: 1;
+
+          & ~ .list__movie {
+            transform: translateX(calc(250px * 0.5));
+          }
+        }
+      }
+    }
+  }
+
+  &__movie {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    transition: 0.45s all;
+    transform-origin: left center;
+  }
+}
+
+@include custom-scroll-bar()

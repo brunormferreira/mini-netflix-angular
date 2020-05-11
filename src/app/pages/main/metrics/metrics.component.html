@@ -1,0 +1,9 @@
+<div class="metrics">
+  <h2 class="metrics__title">Top 5 Filmes visualizados</h2>
+  <div *ngFor="let sorted of topMovies">
+    <app-list
+      [title]="sorted.name"
+      [movies]="sorted.list | slice: 0:5"
+    ></app-list>
+  </div>
+</div>
